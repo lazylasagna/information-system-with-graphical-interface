@@ -7,6 +7,7 @@ import bd as bd
 
 user = input("Имя пользователя: ")
 password = getpass("Пароль (скрыт): ")
+#if getpass does not work for you in pycharm, try editing run/debug configurations - turn on execution/ emulate terminal in output console
 
 root = Tk()
 ttk.Style().configure("TLabel", font="helvetica 13", padding=2, background="#71C9CE", foreground="#E3FDFD")
@@ -159,7 +160,8 @@ def table():
     ttk.Button(frame2, text="Поиск", command=search_apartments).pack(side=LEFT, padx=5, pady=5)
 
     # для работы с ролью администратора добавьте в бд users пользователя с логином (first_name) admin
-
+    # add 'admin' in 'users' database 
+    
     if a == 'admin':
         ttk.Button(frame2, text="Добавить квартиру", command=create_window).pack(side=LEFT, padx=5)
 
